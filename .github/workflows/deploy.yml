@@ -1,0 +1,19 @@
+name: Deploy my-plugin
+on:
+  push:
+    branches:
+    - master
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy my-plugin to WooCart
+      uses: woocart/deploy-action@v5
+      with:
+        url: ${{ secrets.WEBDAV_URL }}
+        username: ${{ secrets.WEBDAV_USERNAME }}
+        password: ${{ secrets.WEBDAV_PASSWORD }}
+        local: "dist/"
+        remote: "plugins/my-woocart-plugin"
