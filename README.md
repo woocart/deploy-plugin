@@ -4,4 +4,4 @@
 
 This is an example GitHub template that shows how to deploy a plugin to a WooCart store using GitHub Action.
 
-For more information, read [the blog post](https://woocart.com/blog/automated-deployments-using-github-action).
+For more information, read [the blog post](https://woocart.com/blog/deployments-github-action).
